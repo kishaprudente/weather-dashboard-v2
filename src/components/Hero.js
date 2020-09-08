@@ -1,5 +1,6 @@
 import React from 'react';
 import { Paper, Typography } from '@material-ui/core';
+import Moment from 'react-moment';
 import SearchBar from './SearchBar';
 import Cloud from '../assets/cloud.jpg';
 
@@ -10,6 +11,9 @@ const Hero = () => {
         Weather Dashboard
       </Typography>
       <SearchBar />
+      <Typography style={styles.date} variant='h6'>
+        <Moment date={new Date()} format='LLLL' />
+      </Typography>
     </Paper>
   );
 };
@@ -23,6 +27,10 @@ const styles = {
     marginTop: '2em',
   },
   title: {
+    padding: '1em',
+    textShadow: '2px 2px lightgray',
+  },
+  date: {
     padding: '1em',
   },
 };
