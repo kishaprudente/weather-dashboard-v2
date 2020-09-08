@@ -12,11 +12,11 @@ const SearchBar = (props) => {
   return (
     <TextField
       style={styles.search}
-      x
       variant='outlined'
       id='search'
+      name='search'
       placeholder='Search...'
-      onChange={handleInputChange}
+      onChange={(e) => handleInputChange(e)}
       InputProps={{
         startAdornment: (
           <InputAdornment position='start'>
