@@ -1,12 +1,12 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import NavBar from '../components/NavBar';
+import Header from '../components/Header';
 
 const Dashboard = () => {
   return (
     <Grid container style={styles.root}>
       <Grid item xs={12}>
-        <NavBar />
+        <Header />
       </Grid>
     </Grid>
   );

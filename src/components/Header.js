@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { AppBar, Typography, Toolbar, InputBase, IconButton } from '@material-ui/core';
+import { AppBar, Typography, Toolbar, InputBase } from '@material-ui/core';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import API from '../util/API';
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NavBar = () => {
+const Header = () => {
   const classes = useStyles();
   const [searchCity, setSearchCity] = useState('');
 
@@ -99,4 +99,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar;
+export default Header;
