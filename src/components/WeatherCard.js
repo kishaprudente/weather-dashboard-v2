@@ -6,11 +6,11 @@ const WeatherCard = ({name, temp, feelsLike, pressure, humidity, min, max}) => {
     <Paper>
       <Card>
         <CardContent>
-          <Typography>{temp} °F</Typography>
+          <Typography>{temp} °Fgit</Typography>
         </CardContent>
       </Card>
     </Paper>
   )
 };
 
-export default WeatherCard;
+export default WeatherCard; 
