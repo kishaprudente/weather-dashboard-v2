@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { AppBar, Typography, Toolbar, InputBase } from '@material-ui/core';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
-import API from '../util/API';
 
 const useStyles = makeStyles((theme) => ({
   nav: {
@@ -51,27 +50,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const Header = ({ handleInputChange, handleKeyPress }) => {
   const classes = useStyles();
-  const [searchCity, setSearchCity] = useState('');
-
-  const handleInputChange = (e) => {
-    const { value } = e.target;
-    setSearchCity(value);
-  }
-
-  const handleKeyPress = (e) => {
-    const { value } = e.target;
-    if(e.keyCode === 13) {
-      console.log('city:', value);
-      handleSearch(searchCity);
-    }
-  }
-
-  const handleSearch = async (city) => {
-    const weatherData = await API.getCityData(city);
-    console.log(weatherData);
-  }
 
   return (
     <AppBar position="static" className={classes.nav}>
